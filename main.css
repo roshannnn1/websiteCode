@@ -257,8 +257,9 @@ ul {
 /* navbar */
 
 .navbar {
-margin:20 px;
-padding: 20 px; 
+  margin-top: 5rem;
+margin:50 px;
+padding: 50 px; 
 display: flex;
 justify-content: center;
 align-items: center;
@@ -270,12 +271,41 @@ align-items: center;
 }
 
 .nav-header{
-    height: 6rem;
+    height: 3rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+.one {
+  left: 44px;
+}
+
+.two {
+  left: 45px;
+}
+
 .nav-header img{
     width: 500px;
+    /*margin-bottom: 5rem;*/
+}
+
+.nav-links {
+margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-link {
+  display: block;
+  text-align: center;
+  text-transform: capitalize;
+  color: var(--grey-600);
+  padding: 1rem 0;
+  border-top: 1px solid var(--grey-500);
+  transition: var(--transition);
+}
+
+.nav_link:hover {
+  color: var(--primary-500);
 }
