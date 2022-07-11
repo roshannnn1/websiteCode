@@ -302,13 +302,34 @@ align-items: center;
 
 
 .nav-links {
-justify-content: space-between;
+
   height: 0;
-  display: flex;
+  display: inline;
+  list-style-type: none;
+  float: left;
+}
     
+  
+  ul {
+    list-style-type: none;
+    overflow: hidden;
     
   }
   
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 30px;
+    text-decoration: none;
+  }
+  li a:hover {
+    background-color: lightblue;
+  }
   .nav-link {
     
     display: block;
