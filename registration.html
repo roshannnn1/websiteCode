@@ -1,3 +1,75 @@
+<link rel="stylesheet" href="./registration.css">
+
+<script src="dark_light.js"></script>
+<script src="index.js"></script>
+
+    <title>Register</title>
+        
+           
+          
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>
+            RECIPE.ki
+        </title>
+        <!-- favicon link-->
+<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+
+
+
+<!-- main css-->
+<link rel="stylesheet" href="./main.css">
+<!-- font awesome-->
+<link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+    
+
+
+    <button id="theme-switcher">
+        <i class="fas fa-lightbulb"></i>
+    </button>
+        
+        
+        
+    
+
+
+
+<body>
+    <nav class="navbar">
+        <div class="nav-center">
+            <div class="nav-header">
+                <a href="index.html" class="nav-logo">
+                    
+                    <img src="./logo.PNG" alt="Recipes Online" />
+                        
+                </a>
+                <div class="nav-links">
+                    <a href="index.html" class="nav-link"> HOME </a>
+                    <a href="about.html" class="nav-link"> ABOUT </a>
+                    <a href="recipes.html" class="nav-link"> RECIPES </a>
+                    <a href="contact.html" class="nav-link"> CONTACT </a>
+                    </div>
+
+                <div class="dropdown">
+                    <button onclick="myFunction()" class="nav-btn btn">
+                        <i class="fas fa-user"></i>
+                    </button>
+                    <div id="myDropdown" class="dropdown-content">
+                      <a href="login.html">Log In</a>
+                      <a href="registration.html">Register</a>
+                      
+                    </div>
+                  </div>
+    
+                
+            </div>
+    
+            
+            
+        </div>
+    </nav>
 <form>
 
 <div class="container">
@@ -18,15 +90,15 @@
 
 <label for="pwd"><b>Password</b></label>
 
-<input type="password" placeholder="Enter Password" name="pwd">
+<input type="text" placeholder="Enter Password" name="pwd">
 
-<label for="confirm"><b>Confirm Password</b></label>
+<label for="pwd"><b>Confirm Password</b></label>
 
-<input type="birthday" placeholder="Enter Birthday" name="birthday">
-
-<input type="text" placeholder="Enter Birthday" name="birthday">
+<input type="text" placeholder="Enter password again " name="pwd">
 
 <label for="birthday"><b>Birthday(mm/dd/yyyy)</b></label>
+
+<input type="text" placeholder="Please enter birthday in correct order" name="birthday">
 
 <hr>
 
@@ -38,8 +110,9 @@
 
 <div class="container signin">
 
-<p>Already have an account? <a href="#">Sign in</a>.</p>
+<p>Already have an account? <a href="#">Log in</a>.</p>
 
 </div>
 
 </form>
+</body>

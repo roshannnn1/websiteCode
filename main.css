@@ -304,10 +304,15 @@ align-items: center;
 .nav-links {
 
   height: 0;
+<<<<<<< HEAD
   display: inline;
   list-style-type: none;
   float: left;
 }
+=======
+  display: flex;
+  align-items: column;
+>>>>>>> 766a5c58940e63e979b680fe9d1730484b2588f5
     
   
   ul {
