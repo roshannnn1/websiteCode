@@ -4,7 +4,13 @@
 var themeSwitcher = document.getElementById("theme-switcher");
  
 themeSwitcher.onclick = function(){
-    var switchTo = "dark";
+    var currentTheme = document.documentElement.getAttribute("data-theme");
+    
+    if(currentTheme === "light"){
+        var switchTo = "dark";
+    }
+    else 
+     switchTo = "light";
     document.documentElement.setAttribute("data-theme", switchTo);
 }
   });
