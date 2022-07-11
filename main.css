@@ -305,7 +305,8 @@ align-items: center;
 
   height: 0;
   display: flex;
-  align-items: column;
+  align-items: center;
+  justify-content: center;
     
 }
   ul {
@@ -336,6 +337,9 @@ align-items: center;
     color: var(--grey-600);
     padding: 1rem 0;
     font-size: medium;
+    margin-left: 20px;
+    margin-right: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     
   }
 
