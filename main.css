@@ -240,12 +240,11 @@ align-items: center;
 
 .nav-header img{
     width: 450px;
-}
-
-.nav-logo{
-  display: flex;
+    display: flex;
   align-items: flex-end;
 }
+
+
 
 
 .nav-links {
