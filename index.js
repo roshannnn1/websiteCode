@@ -1,6 +1,6 @@
 /* When the user clicks the profile button,
 toggle between hiding and showing the dropdown content */
-function myFunction() {
+function dropdownFunction() {
     document.getElementById("myDropdown").classList.toggle("show");
   }
   
@@ -30,7 +30,7 @@ themeSwitcher.onclick = function(){
         var switchTo = "dark";
     }
     else 
-     switchTo = "light";
+    switchTo = "light";
     document.documentElement.setAttribute("data-theme", switchTo);
 }
   });
