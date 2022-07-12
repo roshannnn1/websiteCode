@@ -309,26 +309,7 @@ align-items: center;
   justify-content: center;
     
 }
-  ul {
-    list-style-type: none;
-    overflow: hidden;
-    
-  }
   
-  li {
-    float: left;
-  }
-  
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 20px 30px;
-    text-decoration: none;
-  }
-  li a:hover {
-    background-color: lightblue;
-  }
   .nav-link {
     
     display: block;
