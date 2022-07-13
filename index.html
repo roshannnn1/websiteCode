@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <script src="index.js"></script>
-    <script src="dark_light.js"></script>
+    
 
 <head>
         
@@ -53,10 +52,10 @@
             <a href="#" class="grey-text modal-trigger" data-target="modal-create">Create Recipe</a>
           </li>
           <li class="logged-out">
-            <a href="login.html" class="grey-text modal-trigger" data-target="modal-login">Login</a>
+            <a href="#" class="grey-text modal-trigger" data-target="modal-login">Login</a>
           </li>
           <li class="logged-out">
-            <a href="registration.html" class="grey-text modal-trigger" data-target="modal-signup">Sign up</a>
+            <a href="#" class="grey-text modal-trigger" data-target="modal-signup">Sign up</a>
           </li>
         </span>
       </ul>
@@ -64,12 +63,98 @@
   </nav>
 
 
-<br>
-<br>
+  <div id="modal-login" class="modal">
+    <div class="modal-content">
+      <h4>Login</h4><br />
+      <form id="login-form">
+        <div class="input-field">
+          <input type="email" id="login-email" required />
+          <label for="login-email">Email address</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="login-password" required />
+          <label for="login-password">Your password</label>
+        </div>
+        <button class="btn yellow darken-2 z-depth-0">Login</button>
+      </form>
+    </div>
+  </div>
 
-<p class ="navbar"> you will find all the recipes you will want to try. lets give it a try.</p>
-<img class ="display-image" src="food recipe.png" alt="Food Recipe" style="  max-width:100% ; max-height: 100%;">
+  <div id="modal-signup" class="modal">
+    <div class="modal-content">
+      <h4>Sign up</h4><br />
+      <form id="signup-form">
+        <div class="input-field">
+          <input type="email" id="signup-email" required />
+          <label for="signup-email">Email address</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="signup-password" required />
+          <label for="signup-password">Choose password</label>
+        </div>
+        <button class="btn yellow darken-2 z-depth-0" id="signup" >Sign-up</button>
+      </form>
+    </div>
+  </div>
 
+<p class ="navbar"> Welcome to our homepage. Browse Recipes below.</p>
+
+
+
+
+
+ 
+
+ <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js";
+    import {getAuth, createUserWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/9.1.0/firebase-auth.js";
+    
+    
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyCEw_alvpxHzDnmm403JlM1rAGOzJJW5qI",
+      authDomain: "recipeweb-edaa4.firebaseapp.com",
+      projectId: "recipeweb-edaa4",
+      storageBucket: "recipeweb-edaa4.appspot.com",
+      messagingSenderId: "137224327342",
+      appId: "1:137224327342:web:69ba83de954bc8dba59d3f"
+    };
+  
+    // Initialize Firebase
+    const app  =   initializeApp(firebaseConfig);
+
+    //make auth and firestore variables
+    const auth = getAuth(app);
+    //const db = firebase.firestore();
+
+    const signupForm = document.querySelector('#signup-form');
+signupForm.addEventListener('submit',  (e)=>{
+    e.preventDefault();
+
+    //get user info
+    const email = document.getElementById('signup-email').value;
+    const password = document.getElementById('signup-password').value;
+    console.log(email, password)
+    
+
+    //create user account
+    createUserWithEmailAndPassword(auth, email, password).then((cred) =>{
+        const user = cred.user;
+        console.log(created)
+    })
+})
+  
+  </script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="index.js"></script>
+
+    
 
 </body>
 
