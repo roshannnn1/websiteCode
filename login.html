@@ -1,3 +1,6 @@
+
+
+
 <!DOCTYPE html>
 <html>
     <script src="index.js"></script>
@@ -20,7 +23,7 @@
 
 <!-- main css-->
 <link rel="stylesheet" href="./main.css">
-<link rel="stylesheet" href="./login.css"
+<link rel="stylesheet" href="./login.css">
 <!-- font awesome-->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -36,11 +39,11 @@
 
 
 
-
+<div>
 <nav class="z-depth-0 grey lighten-4">
     <div class="nav-wrapper container">
       <a href="index.html" class="brand-logo">
-        <img src="./logo3.png" style="width: 200px; margin-top: 1px;">
+        <img src="./logo3.png" style="width: 200px; margin-top: 10px; ">
       </a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
           <li class="logged-out">
@@ -62,6 +65,7 @@
       </ul>
     </div>
   </nav>
+  </div>
   <button id="theme-switcher">
     <i class="fas fa-lightbulb"></i>
   </button>
@@ -70,33 +74,40 @@
 <br>
 <br>
 
-<p class ="navbar"> you will find all the recipes you will want to try. lets give it a try.</p>
-<form action="action_page.php" method="post">
+
+
+
+
+
+
+
+
+
+      
+      <br>
+      <br>
+      <form action="action_page.php" method="post">
   
 
-  <div class="container">
-    <label for="email"><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" required>
-
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" required>
-
-    <button type="submit" class="submit-btn">Login</button>
-    <label>
-      <input type="checkbox" checked="checked" name="remember"> Remember me
-    </label>
-  </div>
-
-  <div class="container" style="background-color:#f1f1f1">
-    <button type="button" class="cancelbtn"><a href="index.html">Cancel</a></button>
-    <span class="psw">Forgot <a href="#">password?</a></span>
-  </div>
-</form>
-
-
-
+        <div class="container">
+          <label for="email"><b>Email</b></label>
+          <input type="text" placeholder="Enter Email" name="email" required>
+      
+          <label for="psw"><b>Password</b></label>
+          <input type="password" placeholder="Enter Password" name="psw" required>
+      
+          <button type="submit" class="submit-btn">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+        </div>
+      
+        <div class="container" style="background-color:#f1f1f1">
+          <button type="button" class="cancelbtn"><a href="index.html">Cancel</a></button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+      </form>
 </body>
-
 </html>
 
 
