@@ -277,7 +277,7 @@ align-items: center;
 }
 
 /* Dropdown Button */
-.browse-btn{
+.nav-btn{
   background-color: #3498DB;
   color: white;
   padding: 16px;
@@ -321,15 +321,7 @@ align-items: center;
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
 
-.recipe{
-  justify-content: space-between;
-  align-items: center;
 
-}
-
-img {
-  display: inline-block;
-}
 
 
 
