@@ -6,7 +6,7 @@
     <title>Register</title>
         
            
-          
+        <head>  
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -21,14 +21,11 @@
 <!-- main css-->
 <link rel="stylesheet" href="./main.css">
 <!-- font awesome-->
-<link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    </head>
     
-
-
-    <button id="theme-switcher">
-        <i class="fas fa-lightbulb"></i>
-    </button>
         
         
         
@@ -37,39 +34,40 @@
 
 
 <body>
-    <nav class="navbar">
-        <div class="nav-center">
-            <div class="nav-header">
-                <a href="index.html" >
-                    
-                    <img src="./logo.PNG" alt="Recipes Online" />
-                        
-                </a>
-                <div class="nav-links">
-                    <a href="index.html" class="nav-link"> HOME </a>
-                    <a href="about.html" class="nav-link"> ABOUT </a>
-                    <a href="recipes.html" class="nav-link"> RECIPES </a>
-                    <a href="contact.html" class="nav-link"> CONTACT </a>
-                    </div>
 
-                <div class="dropdown">
-                    <button onclick="dropdownFunction()" class="nav-btn btn">
-                        <i class="fas fa-user"></i>
-                    </button>
-                    <div id="myDropdown" class="dropdown-content">
-                      <a href="login.html">Log In</a>
-                      <a href="registration.html">Register</a>
-                      
-                    </div>
-                  </div>
-    
-                
-            </div>
-    
-            
-            
+    <button id="theme-switcher">
+        <i class="fas fa-lightbulb"></i>
+    </button>
+
+    <nav class="z-depth-0 grey lighten-4">
+        <div class="nav-wrapper container">
+          <a href="index.html" class="brand-logo">
+            <img src="./logo3.png" style="width: 200px; margin-top: 1px;">
+          </a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li class="logged-out">
+                <a href="index.html" class="grey-text modal-trigger" data-target="modal-account">Home</a>
+              </li>
+              <li class="logged-out">
+                <a href="about.html" class="grey-text" id="logout">About Us</a>
+              </li>
+              <li class="logged-in">
+                <a href="#" class="grey-text modal-trigger" data-target="modal-create">Create Recipe</a>
+              </li>
+              <li class="logged-out">
+                <a href="login.html" class="grey-text modal-trigger" data-target="modal-login">Login</a>
+              </li>
+              <li class="logged-out">
+                <a href="registration.html" class="grey-text modal-trigger" data-target="modal-signup">Sign up</a>
+              </li>
+            </span>
+          </ul>
         </div>
-    </nav>
+      </nav>
+      </body>
+
+      <br>
+      <br>
 <form>
 
 <div class="container">
@@ -115,4 +113,3 @@
 </div>
 
 </form>
-</body>
