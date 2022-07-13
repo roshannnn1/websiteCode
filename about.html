@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html>
-<head>
     
-    <script src="index.js"></script>
 
-    <title>About Page</title>
+<head>
         
            
           
@@ -15,20 +13,18 @@
             RECIPE.ki
         </title>
         <!-- favicon link-->
-<link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon" />
 
 
 
 <!-- main css-->
 <link rel="stylesheet" href="./main.css">
-<link rel="stylesheet" href="./about.css">
-
 <!-- font awesome-->
-<link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
-    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+</head>
 
-
+<body>
     <button id="theme-switcher">
         <i class="fas fa-lightbulb"></i>
     </button>
@@ -38,45 +34,68 @@
     
 
 
-</head>
-<body>
-    <nav class="navbar">
-        <div class="nav-center">
-            <div class="nav-header">
-                <a href="index.html" >
-                    
-                    <img src="./logo.PNG" alt="Recipes Online" />
-                        
-                </a>
-                <div class="nav-links">
-                    <a href="index.html" class="nav-link"> HOME </a>
-                    <a href="about.html" class="nav-link"> ABOUT </a>
-                    <a href="recipes.html" class="nav-link"> RECIPES </a>
-                    <a href="contact.html" class="nav-link"> CONTACT </a>
-                    </div>
 
-                <div class="dropdown">
-                    <button onclick="dropdownFunction()" class="nav-btn btn">
-                        <i class="fas fa-user"></i>
-                    </button>
-                    <div id="myDropdown" class="dropdown-content">
-                      <a href="login.html">Log In</a>
-                      <a href="registration.html">Register</a>
-                      
-                    </div>
-                  </div>
-    
-                
-            </div>
-    
-            
-            
+
+<nav class="z-depth-0 grey lighten-4">
+    <div class="nav-wrapper container">
+      <a href="index.html" class="brand-logo">
+        <img src="./logo3.png" style="width: 200px; margin-top: 1px;">
+      </a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li class="logged-out">
+            <a href="index.html" class="grey-text modal-trigger" data-target="modal-account">Home</a>
+          </li>
+          <li class="logged-out">
+            <a href="about.html" class="grey-text" id="logout">About Us</a>
+          </li>
+          <li class="logged-in">
+            <a href="#" class="grey-text modal-trigger" data-target="modal-create">Create Recipe</a>
+          </li>
+          <li class="logged-out">
+            <a href="#" class="grey-text modal-trigger" data-target="modal-login">Login</a>
+          </li>
+          <li class="logged-out">
+            <a href="#" class="grey-text modal-trigger" data-target="modal-signup">Sign up</a>
+          </li>
+        </span>
+      </ul>
+    </div>
+  </nav>
+
+
+  <div id="modal-login" class="modal">
+    <div class="modal-content">
+      <h4>Login</h4><br />
+      <form id="login-form">
+        <div class="input-field">
+          <input type="email" id="login-email" required />
+          <label for="login-email">Email address</label>
         </div>
-    </nav>
+        <div class="input-field">
+          <input type="password" id="login-password" required />
+          <label for="login-password">Your password</label>
+        </div>
+        <button class="btn yellow darken-2 z-depth-0">Login</button>
+      </form>
+    </div>
+  </div>
 
-<link rel="shortcut icon" href="./about.ico" type="image/x-icon" />
-<br>
-<br>
+  <div id="modal-signup" class="modal">
+    <div class="modal-content">
+      <h4>Sign up</h4><br />
+      <form id="signup-form">
+        <div class="input-field">
+          <input type="email" id="signup-email" required />
+          <label for="signup-email">Email address</label>
+        </div>
+        <div class="input-field">
+          <input type="password" id="signup-password" required />
+          <label for="signup-password">Choose password</label>
+        </div>
+        <button class="btn yellow darken-2 z-depth-0" id="signup" >Sign-up</button>
+      </form>
+    </div>
+  </div>
 <img  src="about.png" alt="About Page" style=" align-content: center;   max-width:100% ; height: auto;">
 
 
@@ -97,6 +116,9 @@
        help  people eat food in a way their religion taught them. Any age group of people from all 
        around the world can access this project and be part of the team to help build something meaningful.
 </p>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="index.js"></script>
 
 </body>
 </html>
