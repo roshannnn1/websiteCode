@@ -63,6 +63,8 @@
   </nav>
 
 
+  
+
   <div id="modal-login" class="modal">
     <div class="modal-content">
       <h4>Login</h4><br />
@@ -97,6 +99,24 @@
     </div>
   </div>
 
+   <!-- CREATE RECIPE MODAL -->
+   <div id="modal-create" class="modal">
+    <div class="modal-content">
+      <h4>Create Recipe</h4><br />
+      <form id="create-form">
+        <div class="input-field">
+          <input type="text" id="title" required>
+          <label for="title">Reciple Title</label>
+        </div>
+        <div class="input-field">
+          <textarea id="content" class="materialize-textarea" required></textarea>
+          <label for="content">Recipe Content</label>
+        </div>
+        <button class="btn yellow darken-2 z-depth-0">Create</button>
+      </form>
+    </div>
+  </div>
+
 <p class ="navbar"> Welcome to our homepage. Browse Recipes below.</p>
 
 <img src="./main.jpeg" width="100%" height="80%" style="vertical-align:middle;margin:50px 0px">
@@ -113,60 +133,98 @@
     </ul>
   </div>
 
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/9.9.1/firebase-app.js";
+import {getAuth, createUserWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/9.9.1/firebase-auth.js";
+import { getFirestore, doc, getDoc, getDocs, collection, addDoc} from "https://www.gstatic.com/firebasejs/9.9.1/firebase-firestore.js";
+
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyCEw_alvpxHzDnmm403JlM1rAGOzJJW5qI",
+  authDomain: "recipeweb-edaa4.firebaseapp.com",
+  projectId: "recipeweb-edaa4",
+  storageBucket: "recipeweb-edaa4.appspot.com",
+  messagingSenderId: "137224327342",
+  appId: "1:137224327342:web:69ba83de954bc8dba59d3f"
+};
+
+// Initialize Firebase
+const app  =   initializeApp(firebaseConfig);
+
+//make auth and firestore variables
+const auth = getAuth(app);
+//init db
+const db = getFirestore(app);
+
+//collection reference
+const colRef = collection(db, 'recipes')
+
+//get collection data
+getDocs(colRef).then((snapshot)=>{
+  let recipes = []
+  snapshot.docs.forEach((doc) => {
+    recipes.push({...doc.data(), id: doc.id })
+  })
+  console.log(recipes)
+})
+
+const addRecipeForm = document.querySelector('#create-form');
+addRecipeForm.addEventListener('submit', (e) => {
+e.preventDefault()
+
+addDoc(colRef, {
+title: addRecipeForm.title.value,
+time: addRecipeForm.content.value,
+})
+.then(() => {
+addRecipeForm.reset()
+})
+
+})
+
+
+
+const signupForm = document.querySelector('#signup-form');
+signupForm.addEventListener('submit',  (e)=>{
+e.preventDefault();
+
+//get user info
+const email = document.getElementById('signup-email').value;
+const password = document.getElementById('signup-password').value;
+console.log(email, password)
+
+
+//create user account
+createUserWithEmailAndPassword(auth, email, password).then((cred) =>{
+    const user = cred.user;
+    console.log(created)
+})
+})
+  
+  
+  
+
 
 
 
 
  
+</script>
 
- <script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.0/firebase-app.js";
-    import {getAuth, createUserWithEmailAndPassword} from "https://www.gstatic.com/firebasejs/9.1.0/firebase-auth.js";
-    
-    
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-  
-    // Your web app's Firebase configuration
-    const firebaseConfig = {
-      apiKey: "AIzaSyCEw_alvpxHzDnmm403JlM1rAGOzJJW5qI",
-      authDomain: "recipeweb-edaa4.firebaseapp.com",
-      projectId: "recipeweb-edaa4",
-      storageBucket: "recipeweb-edaa4.appspot.com",
-      messagingSenderId: "137224327342",
-      appId: "1:137224327342:web:69ba83de954bc8dba59d3f"
-    };
-  
-    // Initialize Firebase
-    const app  =   initializeApp(firebaseConfig);
 
-    //make auth and firestore variables
-    const auth = getAuth(app);
-    //const db = firebase.firestore();
 
-    const signupForm = document.querySelector('#signup-form');
-signupForm.addEventListener('submit',  (e)=>{
-    e.preventDefault();
+ 
 
-    //get user info
-    const email = document.getElementById('signup-email').value;
-    const password = document.getElementById('signup-password').value;
-    console.log(email, password)
-    
-
-    //create user account
-    createUserWithEmailAndPassword(auth, email, password).then((cred) =>{
-        const user = cred.user;
-        console.log(created)
-    })
-})
-  
-  </script>
+ 
 
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
 <script src="index.js"></script>
+
 <style>
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
