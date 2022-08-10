@@ -6,10 +6,10 @@ export default function RecipesSection(props) {
   
   const [recipes, setRecipes] = useState([])
 
-  let link = 'http://localhost:4000/api/recipe/all';
+  let link = '/api/recipe/all';
 
   if(props.private){
-    link = 'http://localhost:4000/api/recipe/my'
+    link = '/api/recipe/my'
   }
 
   useEffect(()=>{

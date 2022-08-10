@@ -56,7 +56,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     try{
       e.preventDefault()
-      const response = await fetch(`http://localhost:4000/api/auth/register`, {
+      const response = await fetch(`/api/auth/register`, {
         mode: 'cors',
         method: 'POST',
         credentials: 'include',

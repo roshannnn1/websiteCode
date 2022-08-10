@@ -15,6 +15,7 @@ import Register from "./pages/Register";
 import Login from "./pages/Login"
 import Recipe from "./pages/Recipe";
 import MyRecipes from "./pages/MyRecipes";
+import Error from "./pages/Error";
 
 function App() {
   return (
@@ -29,6 +30,7 @@ function App() {
           <Route path="/login" element={<Login/>}/>
           <Route path="/recipes/:recipeid" element={<Recipe/>}/>
           <Route path="/myrecipes" element={<MyRecipes/>}/>
+          <Route path="/*" element={<Error/>}/>
         </Routes>
       </div>
       <Footer />

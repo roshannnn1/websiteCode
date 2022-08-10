@@ -62,7 +62,7 @@ export default function Navbar() {
 
   async function logout() {
     try {
-      const response = await fetch("http://localhost:4000/api/auth/logout", {
+      const response = await fetch("/api/auth/logout", {
         mode: "cors",
         method: "GET",
         credentials: "include",

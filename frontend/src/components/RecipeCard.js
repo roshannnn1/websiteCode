@@ -11,7 +11,7 @@ export default function RecipeCard({recipe}){
 
     return (
         <div className="recipe-card">
-            <CustomImage imgSrc={`http://localhost:4000/${recipe.imagename}`} pt="65%"/>
+            <CustomImage imgSrc={`/${recipe.imagename}`} pt="65%"/>
             <div className="recipe-card-info">
                 <p className="recipe-title">{recipe.title} </p>
                 <p className="author">Author: {recipe.username}</p>

@@ -43,7 +43,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     try{
       e.preventDefault()
-      const response = await fetch(`http://localhost:4000/api/auth/login`, {
+      const response = await fetch(`/api/auth/login`, {
         mode: 'cors',
         method: 'POST',
         credentials: 'include',

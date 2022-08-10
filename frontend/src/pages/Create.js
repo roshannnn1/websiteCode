@@ -41,7 +41,7 @@ export default function Create() {
       data.append('ingridients', ingridients)
       data.append('directions', direction)
 
-      const response = await fetch('http://localhost:4000/api/recipe/create', {
+      const response = await fetch('/api/recipe/create', {
         mode: 'cors',
         method: 'POST',
         credentials: 'include',

@@ -15,7 +15,7 @@ export default function Recipe() {
   async function deleteRecipe() {
     try {
       const response = await fetch(
-        `http://localhost:4000/api/recipe/delete?recipeid=${recipeid}`,
+        `/api/recipe/delete?recipeid=${recipeid}`,
         {
           method: "DELETE",
           mode: "cors",
@@ -45,7 +45,7 @@ export default function Recipe() {
     async function fetchRecipe() {
       try {
         const response = await fetch(
-          `http://localhost:4000/api/recipe/detail?recipeid=${recipeid}`,
+          `/api/recipe/detail?recipeid=${recipeid}`,
           {
             method: "GET",
             mode: "cors",
@@ -74,7 +74,7 @@ export default function Recipe() {
     <div className="viewRecipe section">
       <div className="image">
         <img
-          src={`http://localhost:4000/${recipeDetail.imagename}`}
+          src={`/${recipeDetail.imagename}`}
           alt="omelete"
         ></img>
       </div>
