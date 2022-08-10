@@ -94,7 +94,7 @@ export default function Recipe() {
       <div className="desc">{recipeDetail.description}</div>
 
       <div className="body">
-        <h3>Ingridients</h3>
+        <h3>Ingredients</h3>
         <p>{recipeDetail.ingridients}</p>
       </div>
 

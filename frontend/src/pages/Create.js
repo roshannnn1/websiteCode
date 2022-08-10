@@ -111,7 +111,7 @@ export default function Create() {
                 ></textarea>
               </li>
               <li>
-                <label for="name">Ingridients:</label>
+                <label for="name">Ingredients:</label>
                 <textarea
                   value={ingridients}
                   required="true"
