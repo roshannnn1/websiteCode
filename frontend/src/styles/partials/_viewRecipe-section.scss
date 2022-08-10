@@ -1,0 +1,77 @@
+.section.viewRecipe{
+
+    display: block;
+
+    .image{
+        width: 100%;
+        height: 70vh;
+    }
+    
+
+    img{
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+        max-width: 100%;
+        max-height: 100%;
+        
+    }
+
+    .heading{
+        margin-top: 1em;
+
+        h1{
+            text-align: center;
+            color: var(--primary-color);
+        }
+
+        div{
+
+            display: flex;
+            justify-content: space-between;
+
+            .metadata{
+                font-size: 0.8em;
+                color: var(--text-light);
+                display: block;
+            }
+
+            .delete{
+                cursor: pointer;
+                color: red;
+            }
+
+            .delete:hover{
+                color: rgb(246, 107, 107);
+            }
+        }
+
+        
+    }
+
+    .desc{
+        margin-top: 1em;
+        word-wrap: break-word;
+        line-height: 1.5em;
+        color: var(--primary-color);
+    }
+    
+    .body{
+        margin-top: 2em;
+
+        h3{
+            color: var(--primary-color);
+        }
+        
+        p{
+            margin-top: 0.3em;
+            white-space: pre-line;
+            word-wrap: break-word;
+            line-height: 1.5em;
+            color: var(--primary-color);
+        }
+    }
+
+}
+
+
